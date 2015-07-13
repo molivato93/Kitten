@@ -1,0 +1,4 @@
+digraph "Fibonacci.main():void" {
+size = "11,7.5";
+codeblock_0 [ shape = box, label = "block 0\nnew String\ndup String\ncall String() [String()]\nstore 0 of type String\nnewstring Insert a relatively small number: \ncall String.output():void [String.output():void]\nload 0 of type String\ncall String.input():void [String.input():void]\nnewstring Fibonacci(\nload 0 of type String\ncall String.concat(String):String [String.concat(String):String]\nnewstring ) = \nnew Fibonacci\ndup Fibonacci\ncall Fibonacci() [Fibonacci()]\nload 0 of type String\ncall String.toInt():int [String.toInt():int]\ncall Fibonacci.fib(int):int [Fibonacci.fib(int):int]\ncall String.concat(int):String [String.concat(int):String]\ncall String.concat(String):String [String.concat(String):String]\ncall String.output():void [String.output():void]\nnewstring \\n\ncall String.output():void [String.output():void]\nreturn void"];
+}

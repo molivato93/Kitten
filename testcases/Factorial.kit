@@ -1,0 +1,19 @@
+class Factorial {
+  constructor() {}
+
+  method void main() {
+    Factorial l0 := new Factorial();
+    int l1 := l0.fact(10);
+    /*int l1 := l0.test(5);*/
+    "Fattoriale di 10: ".concat(l1).output()
+  }
+
+  method int fact(int x)
+    if (x = 0) then return 1
+    else return x * this.fact(x - 1)
+
+  method int test(int x) {
+    x := x + 5;
+    return x
+  }
+}

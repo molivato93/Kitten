@@ -1,0 +1,70 @@
+
+class Scramble {
+  
+  /*Memorizzo la stringa di cui devo calcolare le permutazioni*/
+  field int[] arr
+  field int larr
+  
+  constructor() {}
+  
+  constructor(int[] arr, int larr){
+  	this.arr := arr;
+  	this.larr := larr
+  }
+
+  /* Funzione che ricorsivamente trova tutte le combinazioni
+   di un array e le stampa */
+  
+  method void combo( int[] vid, int index ){
+    
+    for(int i:= 0; i < this.larr; i := i + 1){
+    	    	
+    	if( vid[i] < 0 ) then {
+    		
+    		vid[i] := index;
+    		
+    		if ( index = this.larr - 1 ) then this.stamparr(vid)
+    		
+    		else this.combo( vid , index + 1);
+    		
+    		vid[i] := -1
+    	}
+    }
+  }
+  
+  method void stamparr( int[] vid ){
+    String res := new String();
+        
+    for(int i := 0 ; i < this.larr; i := i+1)
+  		res := res.concat(this.arr[vid[i]]);
+  	
+  	res.concat("\n").output()
+  }
+
+  /* Metodo che stampa tutte le permutazioni delle stringhe */
+  method void scramble(){
+  	int[] vid := new int [ this.larr ];
+  	
+  	for(int i:=0 ; i < this.larr; i := i + 1)
+  		vid[i] := -1;
+  	 	
+  	this.combo(vid, 0)
+  }
+  
+  
+  method void main() {
+    int larr := 3;
+    
+  	int[] arr := new int[larr];
+  	
+  	for(int i:=1; i<larr+1; i:= i+1){
+  		arr[i-1] := i
+  	};
+  	
+  	"Inizio a stampare le combinazioni \n".output();
+  	
+    Scramble sble := new Scramble(arr, larr);
+    sble.scramble()
+    
+  }
+}

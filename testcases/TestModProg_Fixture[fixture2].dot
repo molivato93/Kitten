@@ -1,0 +1,4 @@
+digraph "TestModProg_Fixture[fixture2]" {
+size = "11,7.5";
+codeblock_7 [ shape = box, label = "block 7\nnewstring  fix_2 \ncall String.output():void [String.output():void]\nreturn void"];
+}

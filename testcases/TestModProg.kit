@@ -1,0 +1,46 @@
+class TestModProg {
+	
+	constructor () {}
+	
+	test testDiProvaFallita{
+		assert(1=0);
+		assert(13>25);
+		assert("non sono scemo".equals("sono scemo"));
+		assert(false)
+	}
+	
+	test testDiProvaPassata{
+		assert(0=0);
+		assert(13<25);
+		assert("non sono scemo".equals("non sono scemo"));
+		assert(true)
+	}
+	
+	test testDiProvaPassataSeconda{
+		assert(true)
+	}
+	
+	test testDiProvaPassataTerza{
+		assert(true)
+	}
+	
+	fixture {
+		" fix_1 ".output()
+	}
+	
+	fixture {
+		" fix_0 ".output()
+	}
+	
+	fixture {
+		" fix_2 ".output()
+	}
+	
+	method void main(){
+		String res := "ciao";
+		
+		res.output()
+		
+	}
+
+}
