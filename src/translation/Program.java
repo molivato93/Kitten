@@ -231,31 +231,9 @@ public class Program {
 	protected void storeBytecode(Bytecode bytecode) {
 		if (bytecode instanceof FieldAccessBytecode){
 			sigs.add(((FieldAccessBytecode) bytecode).getField());
-			/*
-			ClassType ct = ((FieldAccessBytecode) bytecode).getField().getDefiningClass();
-			
-			System.out.println("Aggiungo i test di questa classe");
-			//Aggiungo i test di questa classe
-			sigs.addAll(new HashSet<TestSignature>(ct.getTests().values()));
-			
-			//Aggiungo le fixtures di questa classe
-			sigs.addAll(ct.getFixtures());
-			*/
-		}else if (bytecode instanceof CALL){
-				
+		}else if (bytecode instanceof CALL){	
 			// a call instruction might call many methods or constructors at runtime
-			sigs.addAll(((CALL) bytecode).getDynamicTargets());
-			
-			/*
-			for(CodeSignature cs: ((CALL) bytecode).getDynamicTargets()){
-				
-				//Aggiungo i test di questa classe
-				sigs.addAll(new HashSet<TestSignature>(cs.getDefiningClass().getTests().values()));
-				//Aggiungo le fixtures di questa classe
-				sigs.addAll(cs.getDefiningClass().getFixtures());
-				
-			}*/
-			
+			sigs.addAll(((CALL) bytecode).getDynamicTargets());			
 		}
 	}
 			

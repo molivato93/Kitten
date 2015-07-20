@@ -163,7 +163,7 @@ public class TypeChecker {
 	}
 	
 	/**
-	 * Add a command in the commands list.
+	 * Add a command in the declaration list.
 	 * 
 	 * @param c the command added into the list
 	 */
@@ -172,7 +172,7 @@ public class TypeChecker {
 	}
 	
 	/**
-	 * Remove a command from the commands list.
+	 * Remove a command from the declaration list.
 	 * 
 	 * @param c the command will remove from the list
 	 */
@@ -181,11 +181,11 @@ public class TypeChecker {
 	}
 	
 	/**
-	 * This method search a command name in the commandsList
-	 * contains the commands called but not terminated.
+	 * This method search a declaration name in the declarationList
+	 * contains the declaration called but not terminated.
 	 * 
-	 * @param comName the name of the command to search into the commandsList
-	 * @return true if the command was found in the list, else return false
+	 * @param comName the name of the declaration to search into the declarationList
+	 * @return true if the declaration was found in the list, else return false
 	 */
 	public boolean isInCodeDeclarationList(String comName){
 		for(CodeDeclaration c:declarationList)
